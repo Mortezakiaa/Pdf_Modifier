@@ -3,9 +3,9 @@ import modifyPdf from "./PdfModifier"
 
 function App() {
   const [state,setState] = useState({
-    axisX:'',
-    axisY:'',    
-    borderWidth:''
+    axisX:0,
+    axisY:0,    
+    borderWidth:30
   })
 
   const change = async (e)=>{
