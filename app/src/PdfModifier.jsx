@@ -25,14 +25,22 @@ export default async function modifyPdf(existingPdfBytes , data) {
       height: tsnaDims.height,
       opacity: 0.08
     })
-      page.drawRectangle({
-        x: width,
-        y: 0,
-        borderColor: rgb(1, 1, 1),
-        borderWidth: borderWidth,
-        height:height,
-        width:width,
-      })
+    page.drawRectangle({
+      x: 0,
+      y: 0,
+      borderColor: rgb(1,1,1),
+      borderWidth: 20,
+      height:height,
+      width:20,
+    })
+    page.drawRectangle({
+      x: width - 20,
+      y: 0,
+      borderColor: rgb(1,1,1),
+      borderWidth: 20,
+      height:height,
+      width:20,
+    })
       page.drawImage(amisaImage, {
         x: width / 2 + amisaDims.width,
         y: height / 2 - amisaDims.height / 2,
